@@ -62,17 +62,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void createConnection () {
 
         try {
-
             dataOpenHelper = new DataOpenHelper(this);
             connection = dataOpenHelper.getWritableDatabase();
-            Snackbar.make(layoutContentMain, "Conexão criado com sucesso", Snackbar.LENGTH_SHORT)
-                    .setAction("Ok!", null).show();
-
+            Snackbar.make(layoutContentMain, R.string.connect_success, Snackbar.LENGTH_SHORT)
+                    .setAction(R.string.ok, null).show();
         } catch(SQLException ex) {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle("Erro");
+            dlg.setTitle(R.string.error);
             dlg.setMessage(ex.getMessage());
-            dlg.setNeutralButton("Ok", null);
+            dlg.setNeutralButton(R.string.ok, null);
             dlg.show();
         }
 

@@ -8,6 +8,9 @@
     <string name="nameStudent">Nome do aluno</string>
     <string name="nameTeacher">Nome do professor</string>
     <string name="add">Adicionar</string>
+    <string name="ok">Ok!</string>
     <string name="title_activity_student_activy">studentActivy</string>
     <string name="title_activity_student">StudentActivity</string>
+    <string name="connect_success">Conexão criado com sucesso</string>
+    <string name="error">Erro</string>
 </resources>
