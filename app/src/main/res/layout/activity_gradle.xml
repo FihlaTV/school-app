@@ -6,13 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".GradleActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nameTeacher"/>
+
     <EditText
         android:id="@+id/teacherName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nameTeacher" />
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nameStudent"/>
 
     <EditText
         android:id="@+id/studentName"
@@ -20,7 +30,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nameStudent" />
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gradeStudent"/>
 
     <EditText
         android:id="@+id/studentGradle"
@@ -28,7 +43,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/gradeStudent" />
+        android:text="" />
 
     <Button
         android:id="@+id/btnAddStudent"

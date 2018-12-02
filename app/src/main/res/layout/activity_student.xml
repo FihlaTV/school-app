@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".StudentActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"/>
 
     <EditText
         android:id="@+id/studentName"
@@ -14,7 +18,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/name" />
+        android:text="" />
 
     <Button
         android:id="@+id/btnAddStudent"
