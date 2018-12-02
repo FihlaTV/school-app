@@ -21,14 +21,14 @@ public class TeacherRepository {
         ContentValues contentValues = new ContentValues();
         contentValues.put("NAME", teacher.name);
 
-        connection.insertOrThrow("STUDENT", null, contentValues);
+        connection.insertOrThrow("TEACHERS", null, contentValues);
     }
 
     public void remove(int id_teacher) {
         String[] params = new String[1];
         params[0] = String.valueOf(id_teacher);
 
-        connection.delete("TEACHER", "ID_TEACHER = ?", params);
+        connection.delete("TEACHERS", "ID_TEACHER = ?", params);
     }
 
     public void edit(Teacher teacher) {
@@ -38,7 +38,7 @@ public class TeacherRepository {
         String[] params = new String[1];
         params[0] = String.valueOf(teacher.id_teacher);
 
-        connection.update("STUDENT", contentValues, "ID_STUDENT = ?", params);
+        connection.update("TEACHERS", contentValues, "ID_TEACHER = ?", params);
     }
 
     public List<Teacher> getAll() {
@@ -46,7 +46,7 @@ public class TeacherRepository {
 
         StringBuilder sql = new StringBuilder();
 
-        sql.append(" SELECT ID_STUDENT, NAME FROM STUDENT");
+        sql.append(" SELECT ID_TEACHER, NAME FROM TEACHERS");
 
         Cursor result =  connection.rawQuery(sql.toString(), null);
 

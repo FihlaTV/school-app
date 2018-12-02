@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -27,7 +26,6 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
 
     private Student student;
     private DataOpenHelper dataOpenHelper;
-    private LinearLayout layoutContentStudent;
     private SQLiteDatabase connection;
     private StudentRepository studentRepository;
 
@@ -35,7 +33,6 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
-        layoutContentStudent = (LinearLayout) findViewById(R.id.layoutMain);
         listStudent = (ListView) findViewById(R.id.listStudent);
         edtName = (EditText) findViewById(R.id.studentName);
         btnAdd = (Button) findViewById(R.id.btnAddStudent);
