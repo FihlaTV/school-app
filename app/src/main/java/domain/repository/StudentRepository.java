@@ -46,18 +46,17 @@ public class StudentRepository {
 
         StringBuilder sql = new StringBuilder();
 
-        sql.append(" SELECT ID_STUDENT, NAME");
-        sql.append(" FROM STUDENT ");
+        sql.append(" SELECT ID_STUDENT, NAME FROM STUDENT");
 
         Cursor result =  connection.rawQuery(sql.toString(), null);
 
         if (result.getCount() > 0) {
             result.moveToFirst();
-
+            result.getColumnNames();
             do {
                 Student stud = new Student();
-                stud.id_student = result.getInt(result.getColumnIndexOrThrow("ID_STUDENT"));
-                stud.name = result.getString(result.getColumnIndexOrThrow("NAME"));
+                stud.id_student = result.getInt(0);
+                stud.name = result.getString(1);
 
                 students.add(stud);
 
