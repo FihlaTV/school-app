@@ -7,13 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataOpenHelper extends SQLiteOpenHelper {
 
     public DataOpenHelper(Context context) {
-        super(context, "dbSchool", null, 1);
+        super(context, "dbSchool", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(ScriptDLL.getCreateTableStudent());
+        db.execSQL(ScriptDLL.getCreateTableGrade());
+        db.execSQL(ScriptDLL.getCreateTableTeacher());
 
     }
 
