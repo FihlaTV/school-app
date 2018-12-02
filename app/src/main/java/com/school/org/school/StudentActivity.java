@@ -53,7 +53,6 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
             ArrayAdapter<Student> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, students);
             listStudent.setAdapter(arrayAdapter);
 
-
         } catch (SQLException ex) {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
             dlg.setTitle(R.string.error);
@@ -93,6 +92,7 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
 
             try {
                 studentRepository.insert(student);
+                listAllStudents();
             } catch (SQLException ex) {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(this);
                 dlg.setTitle(R.string.error);
