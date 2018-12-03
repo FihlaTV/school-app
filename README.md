@@ -9,12 +9,12 @@ My first App in Android Studio, this app is create to learn CRUD in android.
 # Teacher
 
   - Name
-  Teacher is only necessary name.
+  Is only necessary name.
 
 # Student
 
   - Name
-  Student is only necessary name.
+  Is only necessary name.
 
 # Grade
 
